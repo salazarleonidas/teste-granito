@@ -29,5 +29,13 @@ namespace Calculos.Controllers
                 return BadRequest(new { error = $"Erro inesperado: {e.Message}" });
             }
         }
+
+        [HttpGet]
+        [Route("/showmethecode")]
+        public IActionResult ShowMeTheCode()
+        {
+            var result = "https://github.com/salazarleonidas/teste-granito";
+            return Ok(result);
+        }
     }
 }
